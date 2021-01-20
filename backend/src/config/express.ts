@@ -27,10 +27,6 @@ export class ExpressApp {
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: false }));
 
-        this.app.use(
-            express.static(process.cwd() + '/frontend/dist/frontend/')
-        );
-
         setupLogging(this.app);
 
         this.setupExpressServer();

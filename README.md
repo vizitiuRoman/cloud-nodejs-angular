@@ -1,13 +1,13 @@
 # cloud-nodejs-angular
 
-Steps to use:
+  Steps to use:
  
- cd frontend 
+     cd frontend 
  
      npm install && npm start
  
  
- cd backend 
+     cd backend 
      
      cd docker && docker-compose up -d
      

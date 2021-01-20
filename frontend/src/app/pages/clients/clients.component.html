@@ -1,0 +1,17 @@
+<input type='text' [(ngModel)]='search' (change)='searchClients()'>
+
+<select [(ngModel)]='selectedStatus' (change)='searchClients()'>
+    <option *ngFor='let status of getClientStatuses()'>{{status}}</option>
+</select>
+
+<div *ngIf='!clients?.length'>
+    <h3>LOADING</h3>
+</div>
+
+<div *ngIf='clients?.length'>
+    <ul>
+        <a *ngFor='let client of clients' [routerLink]='"documents/" + client.id + "/" + client.status'>
+            {{client.email}}
+        </a>
+    </ul>
+</div>

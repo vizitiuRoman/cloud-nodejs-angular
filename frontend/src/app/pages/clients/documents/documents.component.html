@@ -1,0 +1,11 @@
+<input multiple type='file' id='uploadInput' (change)='uploadDocuments($event.target)'>
+
+<div *ngIf='!documents?.length'>
+    <h1>Loading</h1>
+</div>
+
+<ul *ngIf='documents?.length'>
+    <li *ngFor='let document of documents'>
+        <a href='' (click)='downloadDocument(document)'>{{document.name}}</a>
+    </li>
+</ul>

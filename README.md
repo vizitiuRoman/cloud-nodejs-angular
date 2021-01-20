@@ -11,5 +11,5 @@
      
      cd docker && docker-compose up -d
      
-     npm i && npm run watch
+     npm install && npm run watch
 
